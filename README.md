@@ -1,6 +1,10 @@
 # compiler-friendly-storyboard-access
 A simple build time script that scans all of the storyboards in your project, and builds a struct of each, each containing an enum of all available view controllers.
 
+## prerequisites
+1. Python
+2. lxml module (`pip install lxml`)
+
 ## Setup
 1. Add the python script to your project root
 2. Use the [ios-res-tool](https://github.com/SteveKChiu/ios-res-tool) script to generate the R.swift file (or grab the blank provided in this repo, though I highly recommend the former :wink:)
