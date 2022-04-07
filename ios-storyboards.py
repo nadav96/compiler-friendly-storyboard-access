@@ -67,10 +67,11 @@ if inputArguments > 1:
     if inputArguments > 2:
         outputDirPath = sys.argv[2]
     else:
-        print "Using input dir as output."
+        print("Using input dir as output.")
         outputDirPath = rootPath
 else:
-    print "Please supply the root directory of the project and output file location"
+    print("Please supply the root directory of the project and output file location")
+    print("USAGE: python ios-storyboards.py [inputDir] [outputDir]")
     sys.exit()
 
 ntpath.basename(rootPath)
@@ -79,4 +80,4 @@ resultSwiftPage = Swifty.createFile(rootPath)
 with open("{}/R+storyboards.swift".format(outputDirPath), "w+") as f:
     f.write(resultSwiftPage)
 
-print "Created R storyboard support"
+print("Created R storyboard support")
