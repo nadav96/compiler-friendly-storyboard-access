@@ -7,13 +7,13 @@ A simple build time script that scans all of the storyboards in your project, an
 
 ## Setup
 1. Add the python script to your project root
-2. Use the [ios-res-tool](https://github.com/SteveKChiu/ios-res-tool) script to generate the R.swift file (or grab the blank provided in this repo, though I highly recommend the former :wink:)
+2. Grab the blank R.swift provided in this repo and add it to your project
 3. Add a run script in the project settings > Build Phases > plus button
 4. In the script text, paste the following:
 ```
 python "${SRCROOT}/ios-storyboards.py" "${SRCROOT}/"
 ```
-5. The script generate a file named **R+storyboards.swift** in the root folder of the project, open Finder, and drag the file to the project navigator.
+5. The script generate a file named **R+storyboards.swift** in the root folder of the project, open Finder, and drag the file to Xcode project navigator.
 
 And you should be set to go! The R+storyboards file is recreated on every build, so if you remove/add/change id of storyboard, the compiler will let you know, rather then finding out on runtime :smile:
 
